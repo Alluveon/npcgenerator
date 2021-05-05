@@ -7,50 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-
-        function makeNPC() { /*insert array values*/
-            var firstName = ["Anatoli", "Asher", "Benji", "Dominicus", "Ezra", "Florence", "Ilya", "Daniil", "Goro",
-                            "Ira", "Julia", "Landon", "Titus", "Sylvia", "Lena", "Sebastian", "Petru", 
-                            "Xerxes", "Vivek", "Junji", "Myles", "Ramesh", "Ulrik"];
-        
-            var lastName = ["Vaughan", "Avery", "Villalobos", "Lim", "Reyna", "Cantrell", "Novak", "Hendrix",
-                            "Archer", "Tang", "Martinez", "Mohamed", "Caddel", "Remington", "Fujita", "Nishiyama",
-                            "Vargas", "Zygmunt", "Adrastos", "Vladimari", "Velasco", "Tillinghast"];
-            
-         
-            var mechType = ["Controller", "Striker", "Artillery", "Defense", "Support"];
-
-            /*first and last name from array*/
-            var rand1 = Math.floor(Math.random() * firstName.length);
-            var rand2 = Math.floor(Math.random() * lastName.length);
-            var rand3 = Math.floor(Math.random() * mechType.length);
-
-
-            /*npc object*/
-            var npc = {
-                nameFirst: firstName[rand1],
-                nameLast: lastName[rand2],
-                mech: mechType[rand3]
-                
-            };
-
-            return npc; 
-        
-        }
-           //log out NPC with console log + for in 
-            function displayNPC(npc) {
-                for (var prop in npc) {
-                console.log(prop + ": " + npc[prop]);
-        }
-                /*console.log("First Name: " + npc.nameFirst + " Last Name: " + npc.nameLast + " Mech Type: " + npc.mech);*/
-            }
-
-        var newNPC = makeNPC();
-
-        displayNPC(newNPC);
-        
-
-    </script>
+    <script src="npcgen.js"></script>
 </body>
 </html>
