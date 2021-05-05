@@ -10,27 +10,30 @@
     <script>
 
         function makeNPC() { /*insert array values*/
-            var firstName = ["Bob", "Mary", "Mike"];
+            var firstName = ["Anatoli", "Asher", "Benji", "Dominicus", "Ezra", "Florence", "Ilya", "Daniil", "Goro",
+                            "Ira", "Julia", "Landon", "Titus", "Sylvia", "Lena", "Sebastian", "Zygmunt", "Petru", 
+                            "Xerxes", "Vivek", "Junji", "Myles", "Ramesh", "Ulrik", "Vladimari"]
+        ];
             var lastName = ["Smith", "Jones", "Catalina"]; 
-            var mechType = ["Controller", "Striker", "Artillery"];
+            var mechType = ["Controller", "Striker", "Artillery", "Defense", "Support"];
 
-
-            /*randomly picking from array*/
-            var firstNameRandom = Math.floor(Math.random() * firstName.length);
-            var lastNameRandom = Math.floor(Math.random() * lastName.length);
-            var mechTypeRandom = Math.floor(Math.random() * mechType.length);
+            /*first and last name from array*/
+            var rand1 = Math.floor(Math.random() * firstName.length);
+            var rand2 = Math.floor(Math.random() * lastName.length);
+            var rand3 = Math.floor(Math.random() * mechType.length);
 
 
             /*npc object*/
             var npc = {
-                nameFirst: firstName[firstNameRandom],
-                nameLast: lastName[lastNameRandom],
-                mech: mechType[mechTypeRandom]
+                nameFirst: firstName[rand1],
+                nameLast: lastName[rand2],
+                mech: mechType[rand3]
+                
             };
 
             return npc; 
+        
         }
-
            //log out NPC with console log + for in 
             function displayNPC(npc) {
                 for (var prop in npc) {
@@ -40,9 +43,9 @@
             }
 
         var newNPC = makeNPC();
-        var newNPC2 = makeNPC();
+
         displayNPC(newNPC);
-        displayNPC(newNPC2);
+        
 
     </script>
 </body>
