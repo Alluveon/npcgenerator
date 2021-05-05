@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function makeNPC() { /*insert array values*/
+            var firstName = ["Bob", "Mary", "Mike"];
+            var lastName = ["Smith", "Jones", "Catalina"]; 
+            var mechType = ["Controller", "Striker", "Artillery"];
+
+
+            /*randomly picking from array*/
+            var firstNameRandom = Math.floor(Math.random() * firstName.length);
+            var lastNameRandom = Math.floor(Math.random() * lastName.length);
+            var mechTypeRandom = Math.floor(Math.random() * mechType.length);
+
+
+            /*npc object*/
+            var npc = {
+                nameFirst: firstName[firstNameRandom],
+                nameLast: lastName[lastNameRandom],
+                mech: mechType[mechTypeRandom]
+            };
+
+            return npc; 
+        }
+
+           //log out NPC with console log + for in 
+            function displayNPC(npc) {
+                for (var prop in npc) {
+                console.log(prop + ": " + npc[prop]);
+        }
+                /*console.log("First Name: " + npc.nameFirst + " Last Name: " + npc.nameLast + " Mech Type: " + npc.mech);*/
+            }
+
+        var newNPC = makeNPC();
+        var newNPC2 = makeNPC();
+        displayNPC(newNPC);
+        displayNPC(newNPC2);
+
+    </script>
+</body>
+</html>
